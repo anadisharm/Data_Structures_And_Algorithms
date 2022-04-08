@@ -7,6 +7,7 @@ class Solution {
         int temp;
         while( j <= k){
             switch(arr[j]){
+                
                 case 0 : {
                     temp = arr[i];
                     arr[i] = arr[j];
