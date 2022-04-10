@@ -1,0 +1,23 @@
+class Solution {
+    public boolean searchMatrix(int[][] arr, int target) {
+        
+        int lo = 0;
+        
+        if(arr.length == 0)
+                return false;
+        int n = arr.length;
+        int m = arr[0].length;
+        int hi = (m*n) - 1;
+        
+        while(lo <= hi){
+            int mid = (lo + (hi - lo)/2);
+            if(arr[mid/m][mid%m] == target)
+                    return true;
+            if(arr[mid/m][mid%m] > target)
+                hi = mid - 1;
+            else
+                lo = mid + 1;
+        }
+        return false;
+    }
+}

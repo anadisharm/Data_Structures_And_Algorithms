@@ -1,0 +1,21 @@
+class Solution {
+    public int majorityElement(int[] arr) {
+        
+        int count = 0;
+        int element = 0;
+        
+        for(int n : arr){
+            if(count == 0)
+                    element = n;
+            if(n == element){
+                count += 1;
+            }
+            else
+                count -= 1;
+            
+        }
+        
+        return element;
+        
+    }
+}
